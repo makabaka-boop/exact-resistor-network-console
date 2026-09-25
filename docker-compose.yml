@@ -1,0 +1,12 @@
+services:
+  circuit:
+    build: ./circuit
+    ports:
+      - "8080:8080"
+
+  ui:
+    build: ./ui
+    ports:
+      - "5173:80"
+    depends_on:
+      - circuit

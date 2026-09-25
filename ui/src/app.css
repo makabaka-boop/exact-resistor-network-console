@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f1420;
+  color: #e6e9f0;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.hint {
+  color: #9aa4b8;
+  font-size: 0.85rem;
+  margin-top: 0;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.examples {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9aa4b8;
+  font-size: 0.9rem;
+}
+
+button {
+  background: #1d2740;
+  color: #e6e9f0;
+  border: 1px solid #35436b;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background: #273355;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.solve {
+  align-self: flex-start;
+  background: #2f6fed;
+  border-color: #2f6fed;
+  font-weight: 600;
+}
+
+.solve:hover {
+  background: #4a84f0;
+}
+
+textarea {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  background: #131a2c;
+  color: #e6e9f0;
+  border: 1px solid #2a3554;
+  border-radius: 6px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.banner {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.banner.error {
+  background: #3a1d24;
+  border: 1px solid #7c2f3d;
+  color: #ffb3bd;
+}
+
+.banner.open {
+  background: #33270f;
+  border: 1px solid #7c5f2f;
+  color: #ffd9a0;
+}
+
+.banner ul {
+  margin: 8px 0 0;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.results h2 {
+  font-size: 1.1rem;
+}
+
+svg {
+  width: 100%;
+  background: #131a2c;
+  border: 1px solid #2a3554;
+  border-radius: 8px;
+}
+
+.node {
+  fill: #2f6fed;
+  stroke: #9db9f5;
+  stroke-width: 2;
+}
+
+.node-label {
+  fill: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.pot-label {
+  fill: #9db9f5;
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.edge-label {
+  fill: #c8d0e0;
+  font-size: 11px;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: #131a2c;
+  stroke-width: 3px;
+}
+
+.tables {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  border: 1px solid #2a3554;
+  padding: 6px 14px;
+  text-align: left;
+}
+
+th {
+  background: #1d2740;
+}
