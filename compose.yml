@@ -1,0 +1,23 @@
+services:
+  circuit:
+    build: ./circuit
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"]
+      interval: 5s
+      timeout: 2s
+      retries: 12
+
+  ui:
+    build: ./ui
+    environment:
+      CIRCUIT_URL: http://circuit:8080
+      # adapter-node 生产模式下以此校验表单 Origin（CSRF 防护），
+      # 若对外暴露的地址/端口不同，请相应修改
+      ORIGIN: http://localhost:3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      circuit:
+        condition: service_healthy
